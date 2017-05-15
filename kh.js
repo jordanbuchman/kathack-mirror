@@ -553,9 +553,11 @@ function PlayerBall(parentNode, stickyNodes, ballOpts, sounds) {
         canvas_ctx.fillStyle = "#fff";
         //canvas_ctx.beginPath();
         console.log("drawing");
+        canvas_ctx.translate(radius,radius);
         canvas_ctx.rotate(th);
         canvas_ctx.drawImage(saket, 0, 0, (radius)*2, (radius)*2);
         canvas_ctx.rotate(0);
+        canvas_ctx.translate(0,0);
         //canvas_ctx.arc(radius, radius, radius - 1, 0, Math.PI * 2, true);
         //canvas_ctx.fill();
         /* draw outer border. */
