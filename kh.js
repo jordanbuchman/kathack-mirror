@@ -556,7 +556,7 @@ function PlayerBall(parentNode, stickyNodes, ballOpts, sounds) {
         canvas_ctx.save();
         canvas_ctx.translate(radius,radius);
         canvas_ctx.rotate(th);
-        canvas_ctx.drawImage(saket, 0, 0, (radius)*2, (radius)*2);
+        canvas_ctx.drawImage(saket, -radius, -radius, (radius)*2, (radius)*2);
         canvas_ctx.restore();
         //canvas_ctx.arc(radius, radius, radius - 1, 0, Math.PI * 2, true);
         //canvas_ctx.fill();
