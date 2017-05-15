@@ -551,9 +551,10 @@ function PlayerBall(parentNode, stickyNodes, ballOpts, sounds) {
         /* draw white circle. */
         canvas_ctx.clearRect(0, 0, 2 * radius, 2 * radius);
         canvas_ctx.fillStyle = "#fff";
-        canvas_ctx.beginPath();
-        canvas_ctx.arc(radius, radius, radius - 1, 0, Math.PI * 2, true);
-        canvas_ctx.fill();
+        //canvas_ctx.beginPath();
+        canvas_ctx.drawImage(saket, radius, radius, (radius-1)*2, (radius-1)*2);
+        //canvas_ctx.arc(radius, radius, radius - 1, 0, Math.PI * 2, true);
+        //canvas_ctx.fill();
         /* draw outer border. */
         canvas_ctx.strokeStyle = color;
         canvas_ctx.beginPath();
@@ -802,6 +803,9 @@ Realistic Pickups? <input id="checkv" type="checkbox" checked="checked" />\
 
 function main() {
     var gameDiv, checkInterval, stickyNodes, popup;
+    
+    saket = new Image();
+    saket.src = 'https://raw.githubusercontent.com/jordanbuchman/kathack-mirror/master/saketramball.png';
     
     gameDiv = document.createElement('div');
     gameDiv.khIgnore = true;
