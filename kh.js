@@ -539,6 +539,7 @@ function PlayerBall(parentNode, stickyNodes, ballOpts, sounds) {
     };
     
     function drawBall() {
+        console.log("drawing")
         var sx1, sy1, sx2, sy2, dx, dy, i, pct1, pct2, z1, z2;
         /* move/resize canvas element. */
         canvas_el.style.left = (x - radius) + 'px';
