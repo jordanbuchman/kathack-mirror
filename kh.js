@@ -555,7 +555,7 @@ function PlayerBall(parentNode, stickyNodes, ballOpts, sounds) {
         console.log("drawing");
         canvas_ctx.save();
         canvas_ctx.translate(radius,radius);
-        canvas_ctx.rotate(th);
+        canvas_ctx.rotate(th+Math.PI*3/2);
         canvas_ctx.drawImage(saket, -radius, -radius, (radius)*2, (radius)*2);
         canvas_ctx.restore();
         //canvas_ctx.arc(radius, radius, radius - 1, 0, Math.PI * 2, true);
