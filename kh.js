@@ -539,7 +539,6 @@ function PlayerBall(parentNode, stickyNodes, ballOpts, sounds) {
     };
     
     function drawBall() {
-        console.log("drawing")
         var sx1, sy1, sx2, sy2, dx, dy, i, pct1, pct2, z1, z2;
         /* move/resize canvas element. */
         canvas_el.style.left = (x - radius) + 'px';
@@ -553,6 +552,7 @@ function PlayerBall(parentNode, stickyNodes, ballOpts, sounds) {
         canvas_ctx.clearRect(0, 0, 2 * radius, 2 * radius);
         canvas_ctx.fillStyle = "#fff";
         //canvas_ctx.beginPath();
+        console.log("drawing");
         canvas_ctx.drawImage(saket, 0, 0, (radius)*2, (radius)*2);
         //canvas_ctx.arc(radius, radius, radius - 1, 0, Math.PI * 2, true);
         //canvas_ctx.fill();
